@@ -1,0 +1,69 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(6, 6, 7, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8vh 16px 16px;
+  overflow-y: auto;
+}
+
+.modal-panel {
+  width: 100%;
+  max-width: 440px;
+  background: var(--panel-solid);
+  border: 1px solid var(--panel-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 20px;
+}
+
+.modal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.modal-head h3 {
+  font-size: 16px;
+}
+
+.modal-head p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.deal-detail-section {
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--panel-border);
+}
+
+.deal-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 12.5px;
+}
+
+.deal-detail-row .k {
+  color: var(--text-muted);
+}
+
+.deal-detail-row .v {
+  color: var(--text-secondary);
+  font-weight: 600;
+}

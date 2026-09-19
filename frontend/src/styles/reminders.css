@@ -1,0 +1,141 @@
+.reminders-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 18px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .reminders-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reminder-group {
+  margin-bottom: 22px;
+}
+
+.reminder-group-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.reminder-group-title .count {
+  background: var(--raised);
+  padding: 1px 7px;
+  border-radius: var(--radius-pill);
+  font-size: 10.5px;
+}
+
+.reminder-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reminder-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: var(--panel-solid);
+  border: 1px solid var(--panel-border);
+}
+
+.reminder-row.is-overdue {
+  border-color: rgba(239, 75, 75, 0.35);
+  background: linear-gradient(0deg, rgba(239, 75, 75, 0.06), rgba(239, 75, 75, 0.06)), var(--panel-solid);
+}
+
+.reminder-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 7px;
+  border: 1.5px solid var(--panel-border-strong);
+  display: grid;
+  place-items: center;
+  flex: none;
+  background: var(--raised);
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.reminder-check:hover {
+  border-color: var(--accent);
+  transform: scale(1.07);
+}
+
+.reminder-check.checked {
+  background: linear-gradient(155deg, var(--accent) 0%, var(--accent-dim) 100%);
+  border-color: transparent;
+}
+
+.reminder-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.reminder-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.reminder-title.is-done {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.reminder-sub {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.reminder-due {
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+.reminder-due.is-overdue {
+  color: var(--danger);
+}
+
+.reminder-due.is-today {
+  color: var(--warning);
+}
+
+.new-reminder-panel {
+  padding: 18px;
+  position: sticky;
+  top: 24px;
+}
+
+.new-reminder-panel h3 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.new-reminder-panel .hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.new-reminder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
